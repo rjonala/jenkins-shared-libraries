@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo "Hello"
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rjonala/docker-hello-world-spring-boot.git']]])
-                sh 'docker build .'
+                sh 'sudo docker build .'
             }
         }
     }
